@@ -2,13 +2,22 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { FaGithub, FaGlobe, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-const Nemu = [
+const Menu = [
   { textNav: '_Início', url: '/' },
   { textNav: '_Sobre', url: '/About' },
   { textNav: '_Projetos', url: '/Projects' },
   { textNav: '_Contato', url: '/Contact' }
 ];
+
+const Social = [
+  { icon: <FaGithub />, url: 'https://github.com/josef-stack' },
+  { icon: <FaWhatsapp />, url: 'https://wa.me/5521971246822' },
+  { icon: <FaInstagram />, url: 'https://instagram.com/seuPerfil' },
+  { icon: <FaGlobe />, url: 'https://seusite.com' }
+];
+
 
 export default function Navigation({ closeMenu }: { closeMenu: () => void }) {
   const [dimension, setDimension] = useState({ width: 0, height: 0 })
@@ -18,6 +27,20 @@ export default function Navigation({ closeMenu }: { closeMenu: () => void }) {
   }, []);
 
 const bezier = [0.76, 0, 0.24, 1] as [number, number, number, number];
+
+const [offsetLeft, setOffsetLeft] = useState('-100vw');
+
+  useEffect(() => {
+    const updateOffset = () => {
+      const width = window.innerWidth - 80;
+      setOffsetLeft(`-${width}px`);
+    };
+
+    updateOffset(); 
+    window.addEventListener('resize', updateOffset); 
+
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []);
 
 const slideUp: {
   initial: {
@@ -53,7 +76,7 @@ const slideUp: {
 } = {
   initial: {
     top: 0,
-    left: '-100vh',
+    left: offsetLeft,
     opacity: 0,
     transition: {
       duration: 0.8,
@@ -63,7 +86,7 @@ const slideUp: {
   },
   animate: {
     top: 0,
-    left: '-100vw',
+    left: offsetLeft,
     opacity: 1,
     transition: {
       duration: 0.8,
@@ -73,7 +96,7 @@ const slideUp: {
   },
   exit: {
     top: 0,
-    left: '-100vh',
+    left: offsetLeft,
     opacity: 0,
     transition: {
       duration: 0.8,
@@ -89,17 +112,17 @@ const slideUp: {
       initial="initial"
       animate="animate"
       exit="exit"
-      className='navigation bg-neutral-50 z-30'
-    >
+      className='navigation pl-5 sm:pl-20 pt-40 sm:pt-0 flex justify-around items-center flex-col sm:flex-row bg-neutral-50 z-30'
+    > 
       {dimension.width > 0 && (
         <>
           <motion.ul
             initial="initial"
             animate="animate"
             exit="exit"
-            className='absolute top-1/5 sm:left-40 left-24 w-full sm:w-[90%] sm:h-3/5 h-2/4 flex flex-col items-left justify-around z-40'
+            className='w-full sm:w-[90%] sm:h-3/5 h-2/4 flex flex-col items-left justify-around z-40'
           >
-            {Nemu.map((item, index) => (
+            {Menu.map((item, index) => (
               <motion.li
                 key={index} 
                 initial={{ opacity: 0, rotateX: '90deg' }}
@@ -111,10 +134,35 @@ const slideUp: {
                 <Link
                   href={item.url}
                   onClick={closeMenu}
-                  className='w-5/6 h-1/4 lg:text-9xl md:text-6xl sm:text-5xl text-3xl text-neutral-500 hover:text-neutral-950 font-extrabold hover:translate-x-10 duration-500 flex justify-between items-center uppercase'
+                  className='w-5/6 h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-500 hover:text-neutral-950 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.textNav}
                 </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+          <motion.ul
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className='sm:left-40 left-24 sm:w-1/4 w-[90%] sm:h-3/5 h-2/4 flex sm:flex-col flex-row items-left justify-around z-40'
+          >
+            {Social.map((item, index) => (
+              <motion.li
+                key={index} 
+                initial={{ opacity: 0, rotateX: '90deg' }}
+                animate={{ opacity: 1, rotateX: '0deg' }}
+                exit={{ opacity: 0, rotateX: '-90deg' }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+                className='w-full h-full flex justify-start items-center z-40'
+              >
+                <a
+                  href={item.url}
+                  target='_blank'
+                  className='w-5/6 h-full lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-500 hover:text-neutral-950 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
+                >
+                  {item.icon}
+                </a>
               </motion.li>
             ))}
           </motion.ul>
