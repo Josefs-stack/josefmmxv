@@ -31,37 +31,3 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: white;
-  z-index: -1;
-}
-
-.glitch::before {
-  color: #0ff;
-  animation: glitchTop 1s infinite linear alternate-reverse;
-}
-
-.glitch::after {
-  color: #f0f;
-  animation: glitchBottom 1s infinite linear alternate-reverse;
-}
-
-@keyframes glitchTop {
-  0% { transform: translate(0, 0); opacity: 1; }
-  20% { transform: translate(-2px, -2px); opacity: 0.8; }
-  40% { transform: translate(-5px, 0); opacity: 0.6; }
-  100% { transform: translate(0, 0); opacity: 1; }
-}
-
-@keyframes glitchBottom {
-  0% { transform: translate(0, 0); opacity: 1; }
-  20% { transform: translate(2px, 2px); opacity: 0.8; }
-  40% { transform: translate(5px, 0); opacity: 0.6; }
-  100% { transform: translate(0, 0); opacity: 1; }
-}

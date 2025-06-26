@@ -1,12 +1,15 @@
-'use client'
+'use client';
 
-import Preloader from "@/components/Preloader";
-import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import Preloader from '@/components/Preloader';
+import dynamic from 'next/dynamic'
+
+const Ball = dynamic(() => import('../components/Home/Ball').then(mod => mod.Ball), {
+  ssr: false, 
+})
 
 export default function Home() {
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,14 +26,34 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <main className="h-[100vh] w-[100vw]">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-
-      </main>
       
-    </div>
+      <div className="w-full h-full flex justify-center items-center relative">
+        
+        <div className="absolute w-full h-full z-10 flex flex-col items-center justify-center pointer-events-none overflow-hidden">
+          <h1 
+            className="xl:text-[15rem] text-9xl text-neutral-500 text-center sm:rotate-0 uppercase -rotate-90" 
+            style={{ WebkitTextStroke: '4px black' }}
+          >
+            Josef
+          </h1>
+          <h3 
+            className="text-4xl sm:h-auto h-0 sm:w-auto w-0 text-neutral-500 text-center overflow-hidden" 
+            style={{ WebkitTextStroke: '2px black' }}
+          >
+            Creative Web Developer
+          </h3>
+        </div>
+
+        {!isLoading && (
+          <div className="absolute w-full h-full">
+            <Ball />
+          </div>
+        )}
+      </div>
+    </main>
   );
 }

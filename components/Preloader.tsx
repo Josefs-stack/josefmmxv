@@ -1,6 +1,4 @@
 'use client'
-
-// Import
 import { motion } from 'framer-motion'
 
 const slideUp = {

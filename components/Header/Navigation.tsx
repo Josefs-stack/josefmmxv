@@ -122,7 +122,7 @@ const slideUp: {
                 <Link
                   href={item.url}
                   onClick={closeMenu}
-                  className='w-5/6 h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
+                  className='w-auto h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-2xl text-neutral-800 hover:text-neutral-50 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.textNav}
                 </Link>
@@ -147,7 +147,7 @@ const slideUp: {
                 <a
                   href={item.url}
                   target='_blank'
-                  className='w-5/6 h-full lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
+                  className='w-5/6 h-auto lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.icon}
                 </a>
