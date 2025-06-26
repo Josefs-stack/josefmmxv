@@ -28,11 +28,11 @@ export default function Navigation({ closeMenu }: { closeMenu: () => void }) {
 
 const bezier = [0.76, 0, 0.24, 1] as [number, number, number, number];
 
-const [offsetLeft, setOffsetLeft] = useState('-100vw');
+const [offsetLeft, setOffsetLeft] = useState('-100vh');
 
   useEffect(() => {
     const updateOffset = () => {
-      const width = window.innerWidth - 80;
+      const width = window.innerWidth - 64;
       setOffsetLeft(`-${width}px`);
     };
 
@@ -44,9 +44,7 @@ const [offsetLeft, setOffsetLeft] = useState('-100vw');
 
 const slideUp: {
   initial: {
-    top: number;
-    left: string;
-    opacity: number;
+    top: string;
     transition: {
       duration: number;
       ease: [number, number, number, number];
@@ -55,8 +53,6 @@ const slideUp: {
   };
   animate: {
     top: number;
-    left: string;
-    opacity: number;
     transition: {
       duration: number;
       ease: [number, number, number, number];
@@ -64,9 +60,7 @@ const slideUp: {
     };
   };
   exit: {
-    top: number;
-    left: string;
-    opacity: number;
+    top: string;
     transition: {
       duration: number;
       ease: [number, number, number, number];
@@ -75,9 +69,7 @@ const slideUp: {
   };
 } = {
   initial: {
-    top: 0,
-    left: offsetLeft,
-    opacity: 0,
+    top: '-100vh',
     transition: {
       duration: 0.8,
       ease: bezier,
@@ -86,8 +78,6 @@ const slideUp: {
   },
   animate: {
     top: 0,
-    left: offsetLeft,
-    opacity: 1,
     transition: {
       duration: 0.8,
       ease: bezier,
@@ -95,9 +85,7 @@ const slideUp: {
     },
   },
   exit: {
-    top: 0,
-    left: offsetLeft,
-    opacity: 0,
+    top: '-100vh',
     transition: {
       duration: 0.8,
       ease: bezier,
@@ -112,7 +100,7 @@ const slideUp: {
       initial="initial"
       animate="animate"
       exit="exit"
-      className='navigation pl-5 sm:pl-20 pt-40 sm:pt-0 flex justify-around items-center flex-col sm:flex-row bg-neutral-50 z-30'
+      className='navigation mr-16 pl-10 sm:pl-20 pt-40 sm:pt-0 flex justify-around items-center flex-col sm:flex-row bg-neutral-500 z-30'
     > 
       {dimension.width > 0 && (
         <>
@@ -120,7 +108,7 @@ const slideUp: {
             initial="initial"
             animate="animate"
             exit="exit"
-            className='w-full sm:w-[90%] sm:h-3/5 h-2/4 flex flex-col items-left justify-around z-40'
+            className='w-[80%] sm:h-3/5 h-2/4 flex flex-col items-left justify-around z-40'
           >
             {Menu.map((item, index) => (
               <motion.li
@@ -134,7 +122,7 @@ const slideUp: {
                 <Link
                   href={item.url}
                   onClick={closeMenu}
-                  className='w-5/6 h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-500 hover:text-neutral-950 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
+                  className='w-5/6 h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.textNav}
                 </Link>
@@ -145,7 +133,7 @@ const slideUp: {
             initial="initial"
             animate="animate"
             exit="exit"
-            className='sm:left-40 left-24 sm:w-1/4 w-[90%] sm:h-3/5 h-2/4 flex sm:flex-col flex-row items-left justify-around z-40'
+            className='sm:left-40 left-24 sm:w-auto w-3/5 sm:h-3/5 h-2/4 flex sm:flex-col flex-row items-left justify-around z-40'
           >
             {Social.map((item, index) => (
               <motion.li
@@ -159,7 +147,7 @@ const slideUp: {
                 <a
                   href={item.url}
                   target='_blank'
-                  className='w-5/6 h-full lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-500 hover:text-neutral-950 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
+                  className='w-5/6 h-full lg:text-8xl md:text-5xl sm:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.icon}
                 </a>

@@ -26,7 +26,7 @@ body {
   top: 0px;
   right: 0px;
   height: 100vh;
-  width: calc(100vw - 80px);
+  width: calc(100vw - 64px);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 
@@ -12,7 +13,7 @@ export default function BackgroundMusic() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.volume = 0.5;
+    audio.volume = 0.3;
     audio.muted = false;
 
     const playAudio = async () => {
@@ -30,7 +31,9 @@ export default function BackgroundMusic() {
       }
     };
 
-    playAudio();
+    setTimeout(() => {
+  playAudio();
+}, 3000);
   }, []);
 
   const toggleMute = () => {
@@ -47,7 +50,12 @@ export default function BackgroundMusic() {
   };
 
   return (
-    <div className="z-50">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: 3 }}
+      className="z-50"
+    >
       <audio ref={audioRef} src="/audio/fundo.mp3" loop />
       <button
         onClick={toggleMute}
@@ -56,6 +64,6 @@ export default function BackgroundMusic() {
       >
         {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}
       </button>
-    </div>
+    </motion.div>
   );
 }

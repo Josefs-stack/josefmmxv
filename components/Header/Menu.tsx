@@ -16,9 +16,12 @@ const Menu = () => {
 
   return (
     <>
-      <button
+      <motion.button  
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 2.5 }}
         onClick={toggleMenu}
-        className='btn mt-10 w-26 h-20 flex text-neutral-50/50 hover:text-white text-lg justify-center items-center transition-all group overflow-hidden z-50 rotate-90 '
+        className='btn mt-10 w-26 h-16 flex text-neutral-50/50 hover:text-white text-lg justify-center items-center transition-all group overflow-hidden z-50 rotate-90 '
       >
         {chars.map((char, index) => (
           <motion.span
@@ -27,7 +30,7 @@ const Menu = () => {
             animate={{ y: "0%", opacity: 1 }}
             exit={{ y: "100%", opacity: 0 }}
             transition={{ 
-              duration: 0.5, 
+              duration: 0.2, 
               delay: index * 0.1
             }}
             className="inline-block uppercase text-md"
@@ -35,7 +38,7 @@ const Menu = () => {
             {char}
           </motion.span>
         ))}
-      </button>
+      </motion.button>
       <AnimatePresence mode="wait">
         {isOpen && (
           <Navigation closeMenu={toggleMenu} />
