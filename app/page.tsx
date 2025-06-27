@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import Preloader from '@/components/Preloader';
 import dynamic from 'next/dynamic'
 
-const Ball = dynamic(() => import('../components/Home/Ball').then(mod => mod.Ball), {
+const Ball = dynamic(() => import('../components/Home/Ball'), {
   ssr: false, 
 })
 
@@ -21,12 +21,12 @@ export default function Home() {
         setIsLoading(false);
         document.body.style.cursor = 'default';
         window.scrollTo(0, 0);
-      }, 400);
+      }, 200);
     })();
   }, []);
 
   return (
-    <main className="h-[100vh] w-[100vw]">
+    <main className="h-[100vh]">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>
@@ -47,12 +47,10 @@ export default function Home() {
             Creative Web Developer
           </h3>
         </div>
-
-        {!isLoading && (
-          <div className="absolute w-full h-full">
-            <Ball />
-          </div>
-        )}
+        <div className="absolute w-full h-full">
+          <Ball />
+        </div>
+        
       </div>
     </main>
   );

@@ -73,7 +73,7 @@ const slideUp: {
     transition: {
       duration: 0.8,
       ease: bezier,
-      delay: 0.8,
+      delay: 1.5,
     },
   },
   animate: {
@@ -89,7 +89,7 @@ const slideUp: {
     transition: {
       duration: 0.8,
       ease: bezier,
-      delay: 0.8,
+      delay: 1.5,
     },
   },
 }
