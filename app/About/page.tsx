@@ -22,7 +22,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="w-full h-screen flex justify-center items-center bg-neutral-900 text-white top-0 left-0"
           >
-            <h1 className="text-4xl font-bold">Bem-vindo à Introdução</h1>
+            <h1 className="text-center text-4xl font-bold">Bem-vindo à Introdução</h1>
           </motion.div>
         )}
         {activeSection === "_História" && (
@@ -46,7 +46,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="w-full h-screen flex justify-center items-center bg-neutral-700 text-white top-0 left-0"
           >
-            <h1 className="text-4xl font-bold">Tecnologias</h1>
+            <h1 className=" text-4xl font-bold">Tecnologias</h1>
           </motion.div>
         )}
         {activeSection === "_CV" && (

@@ -21,7 +21,7 @@ const Menu = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 2.5 }}
         onClick={toggleMenu}
-        className='btn mt-10 w-26 h-16 flex text-neutral-50/50 hover:text-white text-lg justify-center items-center transition-all group overflow-hidden z-50 rotate-90 '
+        className='mt-10 w-26 h-16 flex text-neutral-50/50 hover:text-white text-lg justify-center items-center transition-all group overflow-hidden z-50 rotate-90 cursor-pointer'
       >
         {chars.map((char, index) => (
           <motion.span

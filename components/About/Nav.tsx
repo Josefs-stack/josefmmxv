@@ -21,7 +21,7 @@ export default function Nav({ setActive, active }: NavProps) {
 
   return (
     <motion.ul
-      className="absolute w-auto h-auto sm:top-1/3 top-8 right-16 flex flex-col justify-around items-start z-30 gap-4 sm:rotate-0 rotate-90"
+      className="absolute w-auto h-auto top-8 sm:left-8 left-auto sm:right-auto right-16 flex flex-col justify-around items-start z-30 gap-4 sm:rotate-0 rotate-90"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 1.5 }}
@@ -34,7 +34,10 @@ export default function Nav({ setActive, active }: NavProps) {
           transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
           className='cursor-pointer'
         >
-          <button
+          <motion.button
+            initial={{ x: '-150%', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.2 + index * 0.3 }}
             onClick={() => setActive(item)}
             className={`sm:text-xl text-md font-extrabold uppercase transition-all duration-500 cursor-pointer ${
               active === item
@@ -43,7 +46,7 @@ export default function Nav({ setActive, active }: NavProps) {
             }`}
           >
             {item}
-          </button>
+          </motion.button>
         </motion.li>
       ))}
     </motion.ul>

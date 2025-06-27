@@ -7,12 +7,12 @@ export default function Copering() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.5 }}
-      className='fixed sm:left-1/3 left-0 bottom-8 sm:w-1/3 w-full h-8 flex justify-center items-center overflow-visible mix-blend-difference z-50'
+      className='fixed left-4 top-1/4 h-2/4 w-10 flex justify-center items-center overflow-visible mix-blend-difference z-50 '
     >
       <a
         href='https://github.com/josef-stack'
         target='_blank'
-        className="transform w-auto text-xs font-bold text-neutral-500 hover:text-neutral-50 transition-all"
+        className="min-w-60 -rotate-90 text-xs font-bold text-neutral-500 hover:text-white overflow-visible"
       >
         @ MMXXV - Josef Developer 
       </a>
