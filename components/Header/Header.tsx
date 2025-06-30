@@ -13,7 +13,7 @@ export default function Header() {
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 1.5 }}
         >
           <Menu />
-          {/*<BackgroundMusic />*/}
+          <BackgroundMusic />
         </motion.div>
     );
 }

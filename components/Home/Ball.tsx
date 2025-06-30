@@ -57,7 +57,7 @@ const Ball = () => {
 
 export default Ball;
 
-function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3(), ...props }) {
+function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3() }) {
   const [ref, api] = useSphere(() => ({
     args: [1],
     mass: 1,

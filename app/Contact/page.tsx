@@ -1,25 +1,8 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from '@/components/Contact/Formulario'; 
 
 export default function Contact() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    (
-      async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const locomotiveScroll = new LocomotiveScroll();
-
-        setTimeout(() => {
-          setIsLoading(false);
-          document.body.style.cursor = 'default';
-          window.scrollTo(0, 0);
-        }, 400);
-      }
-    )();
-  }, []);
 
   return (
     <main className="h-full overflow-y-scroll scrollbar-hide contact">

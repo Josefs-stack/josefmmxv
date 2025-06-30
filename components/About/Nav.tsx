@@ -9,13 +9,6 @@ interface NavProps {
   active: SectionKey;
 }
 
-const navItems = [
-  { textNav: '_Introdução', url: '/' },
-  { textNav: '_História', url: '/' },
-  { textNav: '_Skills', url: '/' },
-  { textNav: '_CV', url: '/' },
-];
-
 export default function Nav({ setActive, active }: NavProps) {
   const navItems: SectionKey[] = ["_Introdução", "_História", "_Skills", "_CV"];
 

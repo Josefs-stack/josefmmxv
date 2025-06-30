@@ -7,7 +7,6 @@ import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 export default function BackgroundMusic() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isMuted, setIsMuted] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -20,7 +19,7 @@ export default function BackgroundMusic() {
       try {
         await audio.play();
         setIsMuted(false);
-      } catch (err) {
+      } catch {
         audio.muted = true;
         setIsMuted(true);
         try {
@@ -32,18 +31,15 @@ export default function BackgroundMusic() {
     };
 
     setTimeout(() => {
-  playAudio();
-}, 3000);
+      playAudio();
+    }, 3000);
   }, []);
 
   const toggleMute = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (!hasInteracted) {
-      audio.play().catch(() => {});
-      setHasInteracted(true);
-    }
+    audio.play().catch(() => {});
 
     audio.muted = !audio.muted;
     setIsMuted(audio.muted);

@@ -1,5 +1,4 @@
 'use client';
-// Import
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
@@ -10,35 +9,38 @@ const schema = yup.object({
   email: yup.string().email('Email inválido').required('Email é obrigatório'),
   subject: yup.string().required('Assunto é obrigatório'),
   message: yup.string().max(200, 'Mensagem não pode ter mais de 200 caracteres').required('Mensagem é obrigatória'),
-  whatsapp: yup.string().matches(/^\d{2}-\d{5}-\d{4}$/, 'Formato 21-97124-6822'),
+  whatsapp: yup.string().matches(/^\d{2}-\d{5}-\d{4}$/, 'Formato 21-97124-6822').required('WhatsApp é obrigatório'),
   }).required();
-// Contato
+  
+type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  whatsapp: string;
+};
+
 export default function Formulario() {
   const [buttonText, setButtonText] = useState('Enviar');
 
-  const { control, handleSubmit, setValue, watch, formState: { errors }, reset } = useForm({
+  const { control, handleSubmit, setValue, watch, formState: { errors }, reset } = useForm<FormData>({
     resolver: yupResolver(schema),
     defaultValues: {
       subject: '',
     },
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormData) => {
     const res = await fetch('/api/send-email', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     });
 
     if (res.ok) {
       setButtonText('Enviado');
       reset();
-
-      setTimeout(() => {
-        setButtonText('Enviar');
-      }, 3000);
+      setTimeout(() => setButtonText('Enviar'), 3000);
     } else {
       alert('Houve um erro ao enviar sua mensagem. Tente novamente.');
     }

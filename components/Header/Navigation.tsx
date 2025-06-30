@@ -101,6 +101,7 @@ const slideUp: {
       animate="animate"
       exit="exit"
       className='navigation mr-16 pl-10 sm:pl-20 pt-40 sm:pt-0 flex justify-around items-center flex-col sm:flex-row bg-neutral-500 z-30'
+      style={{ left: offsetLeft }}
     > 
       {dimension.width > 0 && (
         <>
