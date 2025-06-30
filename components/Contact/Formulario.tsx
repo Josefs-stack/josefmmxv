@@ -24,13 +24,17 @@ export default function Formulario() {
   const [buttonText, setButtonText] = useState('Enviar');
 
   const { control, handleSubmit, setValue, watch, formState: { errors }, reset } = useForm<FormData>({
-    resolver: yupResolver(schema),
-    defaultValues: {
-      subject: '',
-    },
-  });
+  resolver: yupResolver(schema),
+  defaultValues: {
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    whatsapp: '',
+  },
+});
 
-  const onSubmit = async (data: FormData) => {
+   const onSubmit = async (data: FormData) => {
     const res = await fetch('/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -39,7 +43,13 @@ export default function Formulario() {
 
     if (res.ok) {
       setButtonText('Enviado');
-      reset();
+      reset({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+        whatsapp: '',
+      });
       setTimeout(() => setButtonText('Enviar'), 3000);
     } else {
       alert('Houve um erro ao enviar sua mensagem. Tente novamente.');
@@ -127,7 +137,7 @@ export default function Formulario() {
           />
           {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
         </div>
-        <button type="submit" className="md:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-lime-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all">
+        <button type="submit" className="md:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-lime-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all cursor-pointer">
           {buttonText}
         </button>
       </div>
