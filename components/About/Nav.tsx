@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-type SectionKey = "_Introdução" | "_História" | "_Skills" | "_CV";
+type SectionKey = "_Introdução" | "_Certificados" | "_Skills" | "_CV";
 
 interface NavProps {
   setActive: (val: SectionKey) => void;
@@ -10,7 +10,7 @@ interface NavProps {
 }
 
 export default function Nav({ setActive, active }: NavProps) {
-  const navItems: SectionKey[] = ["_Introdução", "_História", "_Skills", "_CV"];
+  const navItems: SectionKey[] = ["_Introdução", "_Certificados", "_Skills", "_CV"];
 
   return (
     <motion.ul
