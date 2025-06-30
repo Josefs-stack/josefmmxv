@@ -12,7 +12,7 @@ export default function About() {
   const [activeSection, setActiveSection] = useState<SectionKey>("_Introdução");
 
   return (
-    <main className="h-screen flex justify-center items-center z-10">
+    <main className="h-screen flex justify-center items-center z-10 overflow-hidden">
       <Nav setActive={setActiveSection} active={activeSection} />
       <AnimatePresence mode="wait">
         {activeSection === "_Introdução" && (
@@ -46,7 +46,7 @@ export default function About() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full h-screen flex justify-center items-center top-0 left-0"
+            className="w-full h-screen flex justify-center md:items-center items-end top-0 left-0"
           >
             <Skills />
           </motion.div>

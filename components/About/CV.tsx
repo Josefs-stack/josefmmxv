@@ -6,7 +6,7 @@ import DownloadButton from './DonwloadButton';
 
 export default function CV() {
   return (
-    <article className="h-full w-full lg:pt-10 pt-32 flex flex-col items-center justify-around text-center p-8 space-y-6">
+    <article className="h-full w-auto lg:pt-10 pt-32 flex flex-col items-center justify-around text-center p-8 space-y-6">
       
       <motion.h1
         initial={{ opacity: 0, y: -10 }}
@@ -29,7 +29,7 @@ export default function CV() {
           href="https://linkedin.com/in/seu-perfil"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-blue-800 hover:scale-110 text-4xl transition-all"
+          className="text-neutral-500 hover:text-white hover:scale-110 text-4xl transition-all"
         >
           <FaLinkedin />
         </a>
@@ -37,7 +37,7 @@ export default function CV() {
           href="https://github.com/seu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-black  hover:scale-110 text-4xl transition-all"
+          className="text-neutral-500 hover:text-white  hover:scale-110 text-4xl transition-all"
         >
           <FaGithub />
         </a>
@@ -45,7 +45,7 @@ export default function CV() {
           href="https://twitter.com/seu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-orange-600  hover:scale-110 text-4xl transition-all"
+          className="text-neutral-500 hover:text-white  hover:scale-110 text-4xl transition-all"
         >
           <FaTwitter />
         </a>

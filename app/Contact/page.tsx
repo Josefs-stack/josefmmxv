@@ -5,7 +5,7 @@ import ContactForm from '@/components/Contact/Formulario';
 export default function Contact() {
 
   return (
-    <main className="h-full overflow-y-scroll scrollbar-hide contact">
+    <main className="h-full overflow-y-scroll Scroll-none">
       <div className='w-full md:h-full h-[150vh] md:pt-10 pt-20 px-10 flex flex-col justify-center items-center md:overflow-hidden'>
         <motion.h1
           initial={{ y: -100, opacity: 0 }}

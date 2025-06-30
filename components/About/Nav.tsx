@@ -14,7 +14,7 @@ export default function Nav({ setActive, active }: NavProps) {
 
   return (
     <motion.ul
-      className="absolute w-auto h-auto top-8 md:left-8 left-auto md:right-auto right-16 flex flex-col justify-around items-start z-30 gap-4 md:rotate-0 rotate-90"
+      className="absolute w-auto h-auto top-6 md:left-8 left-auto md:right-auto right-20 flex flex-col justify-around items-start z-30 gap-4 md:rotate-0 rotate-90 mix-blend-difference"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, delay: 1.5 }}

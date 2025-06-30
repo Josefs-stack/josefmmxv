@@ -57,17 +57,17 @@ export default function Skills() {
   ];
 
   return (
-    <article className="h-full w-full flex flex-col justify-center items-center px-4 py-12">
+    <article className="h-4/5 w-5/6 flex flex-col justify-around items-center px-4 py-12 overflow-y-scroll md:overflow-hidden Scroll-none">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-        className="text-4xl text-neutral-500 font-bold mb-12"
+        className="sm:mt-0 mt-8 w-full h-[30vh] sm:text-4xl text-xl sm:text-center text-left text-neutral-500 font-bold mb-12"
       >
         Skills & Ferramentas
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-8xl w-full">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.category}
@@ -80,7 +80,7 @@ export default function Skills() {
             }}
             className="bg-neutral-500 shadow-md rounded-lg p-6"
           >
-            <h2 className="text-xl font-semibold mb-4 text-neutral-950">{skill.category}</h2>
+            <h2 className="text-center text-xl font-semibold mb-4 text-neutral-950">{skill.category}</h2>
             <ul className="space-y-3 text-neutral-800 ">
               {skill.items.map(({ name, icon: Icon }) => (
                 <li key={name} className="flex items-center gap-3">
