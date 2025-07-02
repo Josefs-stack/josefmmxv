@@ -27,14 +27,14 @@ export default function Certif() {
         Certificados & Escolaridade
       </motion.h1>
 
-      <div className="h-auto sm:h-1/2 grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+      <div className="h-auto sm:h-1/2 grid grid-cols-1 md:grid-cols-2 gap-10 w-full mb-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8, ease: 'easeOut' }}
           className="bg-neutral-500 shadow-md rounded-lg p-6"
         >
-          <h2 className="text-center text-4xl font-semibold mb-4 text-neutral-950">
+          <h2 className="text-center sm:text-4xl text-xl font-semibold mb-4 text-neutral-950">
             Cursos & Certificados
           </h2>
           <ul className="space-y-3 text-neutral-800">
@@ -53,9 +53,9 @@ export default function Certif() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1, duration: 0.8, ease: 'easeOut' }}
-          className="bg-neutral-500 shadow-md rounded-lg p-6 flex flex-col justify-center"
+          className="bg-neutral-500 shadow-md rounded-lg p-6 flex flex-col justify-between sm:pb-28"
         >
-          <h2 className="text-center text-xl font-semibold mb-4 text-neutral-950">
+          <h2 className="text-center sm:text-4xl text-xl font-semibold mb-4 text-neutral-950">
             Formação Acadêmica
           </h2>
           <div className="text-neutral-800 space-y-2">
