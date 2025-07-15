@@ -66,7 +66,7 @@ export default function Formulario() {
             key={subjectOption}
             type="button"
             onClick={() => setValue('subject', subjectOption, { shouldValidate: true })}
-            className={`mb-3 ml-8 p-3 md:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
+            className={`mb-3 ml-8 p-3 md:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 hover:bg-lime-500 hover:text-neutral-950 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
           >
             {subjectOption}
           </button>

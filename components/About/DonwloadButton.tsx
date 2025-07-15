@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import Image from 'next/image';
-import QR from '@/assets/QR.png';
+import QR from '@/public/assets/QR.png';
 
 export default function DownloadButton() {
   const mouseX = useMotionValue(0);
