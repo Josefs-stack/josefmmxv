@@ -7,7 +7,7 @@ Aqui você encontra uma seleção dos meus principais projetos, habilidades e ex
 
 ## ✨ Funcionalidades
 
-✅ Apresenta meus projetos e serviços.  
+✅ Apresentação meus projetos e serviços.  
 ✅ Página inicial interativa com elementos em 3D.  
 ✅ Seção “Sobre” para contar um pouco da minha história.  
 ✅ Formulário de contato funcional com envio de e-mail.
