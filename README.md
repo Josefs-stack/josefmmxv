@@ -1,39 +1,55 @@
-# JOSEF PORTFÓLIO
+# 🚀 JOSEF PORTFÓLIO
 
-Aqui você encontra uma seleção dos meus principais projetos, habilidades e experiências como desenvolvedor(a) web. Este site foi criado para apresentar meu trabalho de forma interativa, moderna e responsiva.
+Bem-vindo(a) ao meu portfólio!  
+Aqui você encontra uma seleção dos meus principais projetos, habilidades e experiências como desenvolvedor web. Este site foi criado para apresentar meu trabalho de forma **interativa**, **moderna** e **responsiva**, combinando design, tecnologia e animações 3D.
 
-## Tecnologias Utilizadas
+![Preview](./public/assets/josef-mobile.png)
 
-- **Next.js**: Framework React para desenvolvimento full-stack com rotas otimizadas e recursos de renderização híbrida.
-- **Framer Motion**: Biblioteca de animações para React, usada para criar transições suaves e interativas.
-- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e eficiente.
-- **Three React Fiber**: Abstração do Three.js para React, que permite criar e renderizar gráficos 3D de forma declarativa e integrada ao fluxo do React.
-- **locomotive-scroll**:Biblioteca para scroll suave com efeitos de parallax e scroll-based animations, melhorando a experiência de navegação em páginas longas.
-- **nodemailer**:Módulo Node.js para envio de e-mails de forma simples e segura.
-- **react-icons**: Permite importar apenas os ícones necessários, mantendo o bundle leve e o design consistente.
+## ✨ Funcionalidades
+
+✅ Apresenta meus projetos e serviços.  
+✅ Página inicial interativa com elementos em 3D.  
+✅ Seção “Sobre” para contar um pouco da minha história.  
+✅ Formulário de contato funcional com envio de e-mail.
+
+## ⚙️ Tecnologias Utilizadas
+
+- **Next.js:** Framework React para aplicações full-stack com renderização SSR, SSG e ISR.
+- **Framer Motion:** Animações fluidas e interativas para uma navegação envolvente.
+- **Tailwind CSS:** Estilização responsiva, produtiva e altamente customizável.
+- **React Three Fiber:** Gráficos 3D integrados ao React, para experiências visuais únicas.
+- **locomotive-scroll:** Scroll suave com parallax e animações baseadas no deslocamento da página.
+- **Nodemailer:** Envio de e-mails de forma prática e segura via formulário de contato.
+- **react-icons:** Ícones em SVG práticos e leves, com visual consistente.
+
+## 🌐 Acesse Online
+
+👉 [**Veja online**](https://josefmmxv.vercel.app/)
+
+## 📦 Instalação Local
+
+### Requisitos
+- Node.js (v14 ou superior)
+- npm ou yarn
+
+### Passo a passo
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Josefs-stack/josefmmxxv.git
+   cd josefmmxxv
+
+2. Instale as dependências:
+   # Usando npm
+   npm install
   
-## Funcionalidades
+   # ou usando yarn
+   yarn install
+  
+3. Execulte o projeto:
+   npm run dev
 
-- Apresentar meus projetos e serviços.
-- Home page interativa com elementos 3D.
-- Decrever um pouco sobre mim.
-- Formulário para contato.
+4. Acesse:
+  http://localhost:3000
 
-#Instalação
 
-Requisitos: 
-Node.js (versão 14 ou superior) /
-npm ou yarn /
-Passos para Instalar:
-Clone o repositório:
-bash
-Copiar código
-git clone https://github.com/Josefs-stack/josefmmxxv.git /
-cd josefmmxxv /
-Instale as dependências:
-bash
-Copiar código
-# Usando npm
-npm install
-
-![plot](./public/assets/josef-mobile.png)
