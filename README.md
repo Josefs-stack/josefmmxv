@@ -52,4 +52,6 @@ Aqui você encontra uma seleção dos meus principais projetos, habilidades e ex
 4. Acesse:
   http://localhost:3000
 
+🚧 Em constante evolução
+Assim como minha carreira, este portfólio está sempre em desenvolvimento. Novos projetos, ideias e melhorias são adicionados continuamente.
 
