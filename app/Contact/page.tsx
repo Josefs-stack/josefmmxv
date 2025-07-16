@@ -6,7 +6,7 @@ export default function Contact() {
 
   return (
     <main className="h-full overflow-y-scroll Scroll-none">
-      <div className='w-full md:h-full h-[150vh] md:pt-10 pt-20 px-10 flex flex-col justify-center items-center md:overflow-hidden'>
+      <div className='w-full lg:h-full h-[150vh] lg:pt-10 pt-20 px-10 flex flex-col justify-center items-center md:overflow-hidden'>
         <motion.h1
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

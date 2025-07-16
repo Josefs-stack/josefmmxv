@@ -59,22 +59,22 @@ export default function Formulario() {
   const subject = watch('subject');
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full pt-10 flex md:flex-row flex-col justify-around items-center">
-      <div className="md:w-1/5 w-full md:h-1/2 h-1/5 flex flex-col justify-between items-center space-x-4 mb-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full h-full pt-10 flex lg:flex-row flex-col justify-around items-center">
+      <div className="lg:w-1/5 w-full lg:h-1/2 h-1/5 flex flex-col justify-between items-center space-x-4 mb-4">
         {['Desenvolvimento', 'Comunidade', 'Emprego', 'Outros'].map(subjectOption => (
           <button
             key={subjectOption}
             type="button"
             onClick={() => setValue('subject', subjectOption, { shouldValidate: true })}
-            className={`mb-3 ml-8 p-3 md:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 hover:bg-lime-500 hover:text-neutral-950 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
+            className={`mb-3 ml-8 p-3 lg:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 hover:bg-lime-500 hover:text-neutral-950 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
           >
             {subjectOption}
           </button>
         ))}
         {errors.subject && <p className="text-xs text-red-500">{errors.subject.message}</p>}
       </div>
-      <div className="md:w-4/6 w-full md:h-full h-3/5 md:grid md:grid-cols-3">
-        <div className="sm:w-2/3 w-full h-12 col-span-3 flex flex-row space-x-4 mb-4">
+      <div className="lg:w-4/6 w-full lg:h-full h-3/5 lg:grid md:grid-cols-3">
+        <div className="lg:w-2/3 w-full h-12 col-span-3 flex flex-row space-x-4 mb-4">
           <Controller
             name="name"
             control={control}
@@ -90,8 +90,8 @@ export default function Formulario() {
           {errors.name && <p className="text-xs text-red-500">{errors.name.message}</p>}
         </div>
 
-        <div className='w-full sm:h-12 h-28 col-span-3 flex sm:flex-row flex-col justify-around items-center'>
-          <div className="sm:w-2/5 w-full h-full flex flex-row space-x-4 mb-4">
+        <div className='w-full lg:h-12 h-28 col-span-3 flex lg:flex-row flex-col justify-around items-center'>
+          <div className="lg:w-2/5 w-full h-full flex flex-row space-x-4 mb-4">
             <Controller
               name="email"
               control={control}
@@ -107,7 +107,7 @@ export default function Formulario() {
             {errors.email && <p className="text-xs text-red-500">{errors.email.message}</p>}
           </div>
 
-          <div className="sm:w-2/5 w-full h-full flex flex-row space-x-4 mb-4">
+          <div className="lg:w-2/5 w-full h-full flex flex-row space-x-4 mb-4">
             <Controller
               name="whatsapp"
               control={control}
@@ -123,7 +123,7 @@ export default function Formulario() {
             {errors.whatsapp && <p className="text-xs text-red-500">{errors.whatsapp.message}</p>}
           </div>
         </div>
-        <div className="md:h-full h-56 md:col-span-2 flex flex-col space-x-4 mb-4">
+        <div className="lg:h-full h-56 md:col-span-2 flex flex-col space-x-4 mb-4">
           <Controller
             name="message"
             control={control}
@@ -137,7 +137,7 @@ export default function Formulario() {
           />
           {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
         </div>
-        <button type="submit" className="md:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-lime-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all cursor-pointer">
+        <button type="submit" className="lg:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-lime-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all cursor-pointer">
           {buttonText}
         </button>
       </div>

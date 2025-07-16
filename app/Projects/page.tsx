@@ -10,6 +10,7 @@ type Project = {
   id: string;
   title: string;
   imageUrl: string;
+  mobileImageUrl: string;
   github: string;
   website: string;
 };
@@ -34,13 +35,13 @@ export default function Projects() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }} 
       transition={{ duration: 0.5 , delay: 1.7 }}
-      className="flex md:flex-row flex-col work h-screen border-l-2 border-l-neutral-500 mx-16"
+      className="flex lg:flex-row flex-col work h-screen border-l-2 border-l-neutral-500 mx-16"
     >
-      <div className="md:w-1/2 h-full relative overflow-hidden border-x-2 border-neutral-500">
+      <div className="xl:w-1/3 lg:w-1/2 lg:h-full h-1/3 relative overflow-hidden border-x-2 border-neutral-500">
         <ProjectPreview project={activeProject} />
       </div>
 
-      <div className="md:w-1/2 h-full flex flex-col justify-around items-center">
+      <div className="xl:w-2/3 lg:w-1/2 lg:h-full h-2/3 flex flex-col justify-around items-center">
         {projects.map((project) => (
           <button
             key={project.id}
@@ -63,7 +64,7 @@ export default function Projects() {
             <span 
               className="
                 relative z-10 text-neutral-500 group-hover:text-neutral-950
-                transition-colors duration-500
+                transition-colors duration-500 uppercase md:text-5xl xl:text-6xl text-xl
               "
             >
               {project.title}
