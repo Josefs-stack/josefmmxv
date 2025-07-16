@@ -29,6 +29,8 @@
     "@eslint/eslintrc": "^3",
     "@rocketseat/eslint-config": "^2.2.2",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/locomotive-scroll": "^4.1.4",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
@@ -37,6 +39,8 @@
     "@types/yup": "^0.29.14",
     "eslint": "^9.29.0",
     "eslint-config-next": "15.3.4",
+    "jest": "^30.0.4",
+    "msw": "^2.10.4",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

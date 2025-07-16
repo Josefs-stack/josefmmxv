@@ -12,7 +12,7 @@ export default function BackgroundMusic() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.volume = 0.3;
+    audio.volume = 0.1;
     audio.muted = false;
 
     const playAudio = async () => {
