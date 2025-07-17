@@ -34,10 +34,10 @@ export const projects = [
   },
   {
     id: '5',
-    title: 'Projeto A',
-    imageUrl: '/images/projeto-1.jpg',
-    mobileImageUrl: '/images/projeto-1-mobile.jpg',
-    github: 'https://github.com/seuuser/projetoA',
-    website: 'https://www.projetoA.com',
+    title: '3D Motion',
+    imageUrl: './../assets/3d.png',
+    mobileImageUrl: './../assets/3d-mobile.png',
+    github: 'https://github.com/Josefs-stack/3DPage',
+    website: 'https://3-d-page-delta.vercel.app/',
   }
 ];

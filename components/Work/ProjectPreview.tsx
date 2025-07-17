@@ -4,7 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 type Project = {
-  imageUrl: string; 
+  imageUrl: string;
   mobileImageUrl: string;
 };
 
@@ -25,41 +25,27 @@ function useIsLgUp() {
 export default function ProjectPreview({ project }: { project: Project | null }) {
   const isLgUp = useIsLgUp();
 
+  const imageUrl = isLgUp
+    ? project?.imageUrl
+    : project?.mobileImageUrl;
+
   return (
     <div className="relative w-full h-full overflow-hidden">
       <AnimatePresence mode="wait">
         {project ? (
-          <>
-            {isLgUp ? (
-              <motion.div
-                key="desktop"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  backgroundImage: `url(${project.imageUrl})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              />
-            ) : (
-              <motion.div
-                key="mobile"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  backgroundImage: `url(${project.mobileImageUrl})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              />
-            )}
-          </>
+          <motion.div
+            key={imageUrl}
+            initial={{ opacity: 0, scale: 1.02 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            className="absolute inset-0 w-full h-full"
+            style={{
+              backgroundImage: `url(${imageUrl})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
         ) : (
           <motion.div
             key="placeholder"
@@ -67,6 +53,7 @@ export default function ProjectPreview({ project }: { project: Project | null })
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h1 className="text-neutral-500 md:text-9xl text-6xl uppercase lg:-rotate-90">
               _Work
@@ -74,7 +61,6 @@ export default function ProjectPreview({ project }: { project: Project | null })
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>
   );
 }
