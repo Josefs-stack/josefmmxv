@@ -9,12 +9,12 @@ export const projects = [
     website: 'https://josefmmxv.vercel.app/',
   },
   {
-        id: '2',
-        title: 'Projeto B',
-        imageUrl: '/images/projeto-1.jpg',
-        mobileImageUrl: '/images/projeto-1-mobile.jpg',
-        github: 'https://github.com/seuuser/projetoB',
-        website: 'https://www.projetoB.com',
+    id: '2',
+    title: 'E-commerce',
+    imageUrl: './../assets/ecommerce.png',
+    mobileImageUrl: './../assets/ecommerce-mobile.png',
+    github: 'https://github.com/Josefs-stack/ecommerce',
+    website: 'https://ecommerce-ten-flame-51.vercel.app/',
   },
   {
     id: '3',
