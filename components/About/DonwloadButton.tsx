@@ -17,7 +17,8 @@ export default function DownloadButton() {
 
   return (
     <motion.a
-      href="/meu-cv.pdf"
+      href="https://drive.google.com/file/d/1tUrPRfjaCaQU5Cp34z14NLHjw66IsyoI/view?usp=drive_link"
+      target='_blank'
       download
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
