@@ -30,19 +30,19 @@ export default function Modal({ project, isOpen, onClose }: ModalProps) {
         >
           <motion.div
             key="modal-content"
-            className="relative bg-white max-w-md w-full p-6 md:p-8 rounded-2xl shadow-2xl flex flex-col items-center text-center"
+            className="relative bg-neutral-950 w-82 h-50 p-6 md:p-8 border-l-8 border-t-8 border-r-2 border-b-2 border-green-500 shadow-2xl flex flex-col items-center justify-around text-center"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
           >
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition"
+              className="absolute top-4 right-4 text-red-500/50 hover:text-red-500 hover:scale-125 cursor-pointer transition-all"
             >
               <FaTimes size={18} />
             </button>
 
-            <h2 className="text-2xl font-semibold mb-6 text-neutral-800">
+            <h2 className="text-2xl font-semibold mb-6 text-neutral-50">
               {project.title}
             </h2>
 
@@ -51,7 +51,7 @@ export default function Modal({ project, isOpen, onClose }: ModalProps) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-neutral-900 text-white rounded-lg shadow hover:bg-neutral-700 transition"
+                className="px-4 py-2 w-28 h-14 flex items-center rounded-lg shadow text-neutral-50 bg-neutral-950 border-l-6 border-t-6 border-r-2 border-b-2 hover:border-l-1 hover:border-t-1 hover:border-r-6 hover:border-b-6 border-green-500 transition-all"
               >
                 GitHub
               </a>
@@ -61,7 +61,7 @@ export default function Modal({ project, isOpen, onClose }: ModalProps) {
                   href={project.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-500 transition"
+                  className="px-4 py-2 w-28 h-14 flex items-center rounded-lg shadow text-neutral-950 bg-neutral-50 border-l-6 border-t-6 border-r-2 border-b-2 hover:border-l-1 hover:border-t-1 hover:border-r-6 hover:border-b-6 border-green-500 transition-all"
                 >
                   Website
                 </a>

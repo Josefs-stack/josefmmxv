@@ -55,7 +55,7 @@ export default function ProjectPreview({ project }: { project: Project | null })
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-neutral-950 md:text-9xl text-6xl uppercase lg:-rotate-90">
+            <h1 className="text-neutral-950 md:text-9xl text-4xl uppercase lg:-rotate-90">
               _Work
             </h1>
           </motion.div>
