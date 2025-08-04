@@ -55,7 +55,7 @@ export default function BackgroundMusic() {
       <audio ref={audioRef} src="/audio/fundo.mp3" loop />
       <button
         onClick={toggleMute}
-        className="text-neutral-50/50 rounded-full cursor-pointer mb-10 hover:scale-110 hover:text-white transition"
+        className="text-green-500/50 rounded-full cursor-pointer mb-10 hover:scale-110 hover:text-green-500 transition"
         aria-label="Alternar som"
       >
         {isMuted ? <FaVolumeMute size={24} /> : <FaVolumeUp size={24} />}

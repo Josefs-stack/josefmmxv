@@ -6,7 +6,7 @@ import Preloader from '@/components/Preloader';
 import dynamic from 'next/dynamic'
 
 const Ball = dynamic(() => import('../components/Home/Ball'), {
-  ssr: false, 
+ ssr: false, 
 })
 
 export default function Home() {
@@ -36,7 +36,7 @@ export default function Home() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: 'spring', stiffness: 100, delay: 2 }}
-            className="xl:text-[15rem] text-9xl text-neutral-500 text-center sm:rotate-0 uppercase -rotate-90" 
+            className="xl:text-[15rem] text-9xl text-green-500 text-center sm:rotate-0 uppercase -rotate-90" 
             style={{ WebkitTextStroke: '4px black' }}
           >
             Josef
@@ -45,7 +45,7 @@ export default function Home() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ type: 'spring', stiffness: 100, delay: 2 }} 
-            className="text-4xl sm:h-auto h-0 sm:w-auto w-0 text-neutral-500 text-center overflow-hidden uppercase" 
+            className="text-4xl sm:h-auto h-0 sm:w-auto w-0 text-green-500 text-center overflow-hidden uppercase" 
             style={{ WebkitTextStroke: '2px black' }}
           >
             Creative Web Developer

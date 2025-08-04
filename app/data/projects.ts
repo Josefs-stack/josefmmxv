@@ -14,7 +14,7 @@ export const projects = [
     imageUrl: './../assets/ecommerce.png',
     mobileImageUrl: './../assets/ecommerce-mobile.png',
     github: 'https://github.com/Josefs-stack/ecommerce',
-    website: 'https://ecommerce-ten-flame-51.vercel.app/',
+    website: '',
   },
   {
     id: '3',

@@ -62,7 +62,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-        className="sm:mt-0 mt-8 w-full h-[30vh] sm:text-4xl text-xl sm:text-center text-left text-neutral-500 font-bold mb-12"
+        className="sm:mt-0 mt-8 w-full h-[30vh] sm:text-4xl text-xl sm:text-center text-left text-green-500 font-bold mb-12"
       >
         Skills & Ferramentas
       </motion.h1>

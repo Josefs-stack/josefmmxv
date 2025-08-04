@@ -11,7 +11,7 @@ export default function Contact() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 100, delay: 2 }}
-          className='w-[90%] h-28 lg:text-7xl md:text-6xl sm:text-5xl text-[1.5rem] text-left font-bold md:mt-10 md:mb-4 mb-0 text-neutral-500 uppercase'
+          className='w-[90%] h-28 lg:text-7xl md:text-6xl sm:text-5xl text-[1.5rem] text-left font-bold md:mt-10 md:mb-4 mb-0 text-green-500 uppercase'
         >
           Vamos Conversar?
         </motion.h1>

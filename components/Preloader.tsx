@@ -22,7 +22,7 @@ export default function Preloader() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className='introduction fixed top-0 left-0 w-full h-full z-30 bg-neutral-500'
+      className='introduction fixed top-0 left-0 w-full h-full z-30 bg-green-500'
     >
     </motion.div>
   )

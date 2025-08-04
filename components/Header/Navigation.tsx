@@ -100,7 +100,7 @@ const slideUp: {
       initial="initial"
       animate="animate"
       exit="exit"
-      className='navigation mr-16 pl-10 md:pl-20 pt-40 md:pt-0 flex justify-around items-center flex-col md:flex-row bg-neutral-500 z-30'
+      className='navigation mr-16 pl-10 md:pl-20 pt-40 md:pt-0 flex justify-around items-center flex-col md:flex-row bg-green-500 z-30'
       style={{ left: offsetLeft }}
     > 
       {dimension.width > 0 && (
@@ -123,7 +123,7 @@ const slideUp: {
                 <Link
                   href={item.url}
                   onClick={closeMenu}
-                  className='w-auto h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-2xl text-neutral-800 hover:text-neutral-50 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
+                  className='w-auto h-1/4 lg:text-8xl md:text-5xl sm:text-5xl text-2xl text-neutral-950 hover:text-neutral-50 font-extrabold sm:hover:translate-x-10 hover:translate-x-0 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.textNav}
                 </Link>
@@ -148,7 +148,7 @@ const slideUp: {
                 <a
                   href={item.url}
                   target='_blank'
-                  className='w-5/6 h-auto lg:text-8xl md:text-5xl text-3xl text-neutral-800 hover:text-neutral-50 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
+                  className='w-5/6 h-auto lg:text-8xl md:text-5xl text-3xl text-neutral-950 hover:text-neutral-50 font-extrabold hover:scale-110 duration-500 flex justify-between items-center uppercase'
                 >
                   {item.icon}
                 </a>

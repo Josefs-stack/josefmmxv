@@ -12,7 +12,7 @@ export default function CV() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className=" sm:text-5xl text-2xl font-bold flex justify-center sm:text-center text-left items-center text-neutral-100"
+        className=" sm:text-5xl text-2xl font-bold flex justify-center sm:text-center text-left items-center text-green-500"
       >
         Clique <br/> para baixar <br/> ou escaneie o QR Code.
       </motion.h1>
@@ -29,7 +29,7 @@ export default function CV() {
           href="https://linkedin.com/in/seu-perfil"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-white hover:scale-110 text-4xl transition-all"
+          className="text-green-800 hover:text-green-500 hover:scale-110 text-4xl transition-all"
         >
           <FaLinkedin />
         </a>
@@ -37,7 +37,7 @@ export default function CV() {
           href="https://github.com/seu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-white  hover:scale-110 text-4xl transition-all"
+          className="text-green-800 hover:text-green-500  hover:scale-110 text-4xl transition-all"
         >
           <FaGithub />
         </a>
@@ -45,7 +45,7 @@ export default function CV() {
           href="https://twitter.com/seu-usuario"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-neutral-500 hover:text-white  hover:scale-110 text-4xl transition-all"
+          className="text-green-800 hover:text-green-500  hover:scale-110 text-4xl transition-all"
         >
           <FaTwitter />
         </a>

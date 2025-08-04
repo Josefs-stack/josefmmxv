@@ -55,7 +55,7 @@ export default function Projects() {
           >
             <span 
               className="
-                absolute inset-0 bg-neutral-500 
+                absolute inset-0 bg-green-500 
                 scale-y-0 group-hover:scale-y-100 
                 origin-center transition-transform duration-500 ease-in-out
                 z-0

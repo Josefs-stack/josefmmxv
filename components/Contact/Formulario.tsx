@@ -66,7 +66,7 @@ export default function Formulario() {
             key={subjectOption}
             type="button"
             onClick={() => setValue('subject', subjectOption, { shouldValidate: true })}
-            className={`mb-3 ml-8 p-3 lg:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 hover:bg-lime-500 hover:text-neutral-950 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
+            className={`mb-3 ml-8 p-3 lg:w-full w-56 h-10 flex justify-around text-neutral-500 items-center border-2 hover:bg-green-500 hover:text-neutral-950 rounded-3xl transition-all cursor-pointer ${subject === subjectOption ? 'bg-lime-500 text-neutral-950' : ''}`}
           >
             {subjectOption}
           </button>
@@ -83,7 +83,7 @@ export default function Formulario() {
                 {...field}
                 type="text"
                 placeholder="Seu Nome"
-                className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-lime-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
+                className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-green-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
               />
             )}
           />
@@ -100,7 +100,7 @@ export default function Formulario() {
                   {...field}
                   type="email"
                   placeholder="Seu email"
-                  className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-lime-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
+                  className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-green-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
                 />
               )}
             />
@@ -116,7 +116,7 @@ export default function Formulario() {
                   {...field}
                   type="tel"
                   placeholder="Seu WhatsApp"
-                  className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500 hover:placeholder:text-lime-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
+                  className="w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500 hover:placeholder:text-green-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
                 />
               )}
             />
@@ -131,13 +131,13 @@ export default function Formulario() {
               <textarea
                 {...field}
                 placeholder="Sua mensagem"
-                className="pt-10 mr-3 w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-lime-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
+                className="pt-10 mr-3 w-full h-full p-2 mb-4 bg-transparent border-b border-neutral-500 transition-all placeholder:text-neutral-500  hover:placeholder:text-green-500 hover:placeholder:-translate-y-5 hover:placeholder:text-xs placeholder:transition-all focus:outline-none text-lime-500"
               />
             )}
           />
           {errors.message && <p className="text-xs text-red-500">{errors.message.message}</p>}
         </div>
-        <button type="submit" className="lg:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-lime-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all cursor-pointer">
+        <button type="submit" className="lg:w-full w-[95%] h-62 mx-2 text-3xl text-neutral-500 hover:text-neutral-950 hover:bg-green-500 custom-transition-color flex justify-around items-center border-4 border-neutral-500 rounded-3xl transition-all cursor-pointer">
           {buttonText}
         </button>
       </div>

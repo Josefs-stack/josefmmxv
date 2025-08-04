@@ -49,13 +49,13 @@ export default function ProjectPreview({ project }: { project: Project | null })
         ) : (
           <motion.div
             key="placeholder"
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute  bg-green-500 inset-0 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-neutral-500 md:text-9xl text-6xl uppercase lg:-rotate-90">
+            <h1 className="text-neutral-950 md:text-9xl text-6xl uppercase lg:-rotate-90">
               _Work
             </h1>
           </motion.div>

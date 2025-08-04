@@ -12,7 +12,7 @@ export default function Copering() {
       <a
         href='https://github.com/josef-stack'
         target='_blank'
-        className="min-w-60 -rotate-90 text-xs font-bold text-neutral-500 hover:text-white overflow-visible"
+        className="min-w-60 -rotate-90 text-xs font-bold text-green-500/50 hover:text-green-500 transition-colors overflow-visible"
       >
         @ MMXXV - Josef Developer 
       </a>

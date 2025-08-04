@@ -22,7 +22,7 @@ export default function Certif() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: 'easeOut' }}
-        className="w-full h-auto sm:text-6xl text-2xl text-center text-neutral-500 font-bold"
+        className="w-full h-auto sm:text-6xl text-2xl text-center text-green-500 font-bold"
       >
         Certificados & Escolaridade
       </motion.h1>
@@ -37,7 +37,7 @@ export default function Certif() {
           <h2 className="text-center sm:text-4xl text-xl font-semibold mb-4 text-neutral-950">
             Cursos & Certificados
           </h2>
-          <ul className="space-y-3 text-neutral-800">
+          <ul className="space-y-3 text-center text-neutral-800">
             {cursos.map((curso) => (
               <li key={curso.name} className="flex flex-col">
                 <span className="font-semibold">{curso.name}</span>
@@ -58,7 +58,7 @@ export default function Certif() {
           <h2 className="text-center sm:text-4xl text-xl font-semibold mb-4 text-neutral-950">
             Formação Acadêmica
           </h2>
-          <div className="text-neutral-800 space-y-2">
+          <div className="text-neutral-800 text-center space-y-2">
             <p className="font-semibold">{formacao.name}</p>
             <p className="text-sm text-neutral-800">
               {formacao.org} · {formacao.period}

@@ -34,8 +34,8 @@ export default function Nav({ setActive, active }: NavProps) {
             onClick={() => setActive(item)}
             className={`md:text-xl text-sm font-extrabold uppercase transition-all duration-500 cursor-pointer ${
               active === item
-                ? 'text-white translate-x-4'
-                : 'text-neutral-500 hover:text-white'
+                ? 'text-green-300 translate-x-4'
+                : 'text-green-500/50 hover:text-green-300'
             }`}
           >
             {item}
