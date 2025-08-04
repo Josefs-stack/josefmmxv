@@ -14,8 +14,10 @@ import {
   SiGithub,
   SiVercel,
   SiFigma,
+  SiDotnet,
 } from 'react-icons/si';
 import { FaPeopleArrows, FaComments, FaLightbulb } from 'react-icons/fa';
+import { TbBrandCSharp } from 'react-icons/tb';
 
 export default function Skills() {
   const skills = [
@@ -26,6 +28,7 @@ export default function Skills() {
         { name: 'CSS3', icon: SiCss3 },
         { name: 'JavaScript (ES6+)', icon: SiJavascript },
         { name: 'TypeScript', icon: SiTypescript },
+        { name: 'C#', icon: TbBrandCSharp },
       ],
     },
     {
@@ -33,8 +36,10 @@ export default function Skills() {
       items: [
         { name: 'React.js', icon: SiReact },
         { name: 'Next.js', icon: SiNextdotjs },
+        { name: '.Net', icon: SiDotnet  },
         { name: 'Tailwind CSS', icon: SiTailwindcss },
         { name: 'Framer Motion', icon: SiFramer },
+
       ],
     },
     {
