@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Copering from "@/components/Copering";
+import { Analytics } from "@vercel/analytics/next"
+
 
 export const metadata: Metadata = {
   title: "Josef MMXXV",
@@ -21,6 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Copering />
+        <Analytics />
       </body>
     </html>
   );
