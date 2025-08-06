@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import DownloadButton from './DonwloadButton';
 
 export default function CV() {
@@ -26,7 +26,7 @@ export default function CV() {
         transition={{ delay: 0.5 }}
       >
         <a
-          href="https://linkedin.com/in/seu-perfil"
+          href="https://www.linkedin.com/in/c410j0s3/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green-800 hover:text-green-500 hover:scale-110 text-4xl transition-all"
@@ -34,7 +34,7 @@ export default function CV() {
           <FaLinkedin />
         </a>
         <a
-          href="https://github.com/seu-usuario"
+          href="https://github.com/josefs-stack"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green-800 hover:text-green-500  hover:scale-110 text-4xl transition-all"
@@ -42,12 +42,12 @@ export default function CV() {
           <FaGithub />
         </a>
         <a
-          href="https://twitter.com/seu-usuario"
+          href="https://www.instagram.com/josef.mcmxci"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green-800 hover:text-green-500  hover:scale-110 text-4xl transition-all"
         >
-          <FaTwitter />
+          <FaInstagram />
         </a>
       </motion.div>
     </article>

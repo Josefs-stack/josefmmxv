@@ -11,7 +11,7 @@ export default function Josef() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative md:w-[500px] md:h-[500px] h-0 flex-shrink-0 rounded-full overflow-hidden"
+        className="relative md:w-[500px] md:h-[500px] h-0 flex-shrink-0 border-l-10 border-t-10 border-r-2 border-b-2 border-green-500 rounded-full overflow-hidden"
       >
         <Image
           src={CJ}

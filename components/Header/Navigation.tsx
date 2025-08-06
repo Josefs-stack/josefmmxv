@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { FaGithub, FaGlobe, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Menu = [
   { textNav: '_Início', url: '/' },
@@ -12,10 +12,10 @@ const Menu = [
 ];
 
 const Social = [
-  { icon: <FaGithub />, url: 'https://github.com/josef-stack' },
+  { icon: <FaGithub />, url: 'https://github.com/Josefs-stack' },
   { icon: <FaWhatsapp />, url: 'https://wa.me/5521971246822' },
-  { icon: <FaInstagram />, url: 'https://instagram.com/seuPerfil' },
-  { icon: <FaGlobe />, url: 'https://seusite.com' }
+  { icon: <FaInstagram />, url: 'https://www.instagram.com/josef.mcmxci' },
+  { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/c410j0s3/' },
 ];
 
 
