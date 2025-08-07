@@ -18,11 +18,11 @@ export const projects = [
   },
   {
     id: '3',
-    title: 'Projeto A',
-    imageUrl: '/images/projeto-1.jpg',
-    mobileImageUrl: '/images/projeto-1-mobile.jpg',
-    github: 'https://github.com/seuuser/projetoA',
-    website: 'https://www.projetoA.com',
+    title: 'Scraper Amazon',
+    imageUrl: './../assets/Scraper.png',
+    mobileImageUrl: './../assets/Scraper-mobile.png',
+    github: 'https://github.com/Josefs-stack/AmazonScraper',
+    website: '',
   },
   {
     id: '4',
