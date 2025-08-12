@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next"
 
 
 export const metadata: Metadata = {
-  title: "J0S3f 2K24",
+  title: "Josef MMXXV",
   description: "Desenvolvedor front-end",
   openGraph: {
     title: "Josef MMXXV",
