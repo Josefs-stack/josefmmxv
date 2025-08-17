@@ -6,12 +6,12 @@ import CJ from '@/public/assets/caio.jpg';
 
 export default function Josef() {
   return (
-    <article className="mt-[20vh] md:mt-0 md:h-[80vh] h-[80vh] w-5/6 flex flex-col md:flex-row justify-around items-center px-4 overflow-y-scroll Scroll-none md:overflow-hidden">
+    <article className="mt-[20vh] lg:mt-0 lg:h-[80vh] h-[80vh] w-5/6 flex flex-col md:flex-row justify-around items-center px-4 overflow-y-scroll Scroll-none lg:overflow-hidden">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="relative md:w-[500px] md:h-[500px] h-0 flex-shrink-0 border-l-10 border-t-10 border-r-2 border-b-2 border-green-500 rounded-full overflow-hidden"
+        className="relative lg:w-[500px] lg:h-[500px] h-0 flex-shrink-0 lg:border-l-10 lg:border-t-10 lg:border-r-2 lg:border-b-2 lg:border-green-500 rounded-full overflow-hidden"
       >
         <Image
           src={CJ}
@@ -25,7 +25,7 @@ export default function Josef() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="ml-5 sm:w-2/4 w-4/5 h-auto flex flex-col md:flex-row gap-12 items-center"
+        className="ml-5 lg:w-2/4 w-4/5 h-auto flex flex-col md:flex-row gap-12 items-center"
       >
         <motion.div
           initial={{ opacity: 0 }}
